@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+$row: 240px;
+$gap: 20px;
+$col: 380px;
+
 $clr-primary: #13304a;
 $clr-secondary: #086d59;
 $clr-tertiary: #37b971;
@@ -55,7 +59,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   margin: 0;
-  max-width: 1220px;
+  width: 1260px;
   margin: auto;
 }
 
@@ -103,8 +107,8 @@ a {
     gap: 15px;
   }
   &__btn {
-    width: 142;
-    height: 38;
+    width: 142px;
+    height: 38px;
     padding-top: 8px;
     padding-right: 24px;
     padding-bottom: 8px;
@@ -119,5 +123,48 @@ a {
     &--secondary {
       background-color: $clr-secondary;
     }
+  }
+  &__grid {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(3, $col);
+    grid-auto-rows: $row;
+    grid-auto-flow: dense;
+    grid-template-areas:
+      "robot handshake video"
+      "robot handshake group"
+      "city city group";
+  }
+
+  &__tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border-radius: 12px;
+    &--robot {
+      grid-area: robot;
+      grid-row: span 2;
+    }
+    &--handshake {
+      grid-area: handshake;
+      grid-row: span 2;
+    }
+    &--city {
+      grid-area: city;
+      grid-column: span 2;
+    }
+    &--video {
+      grid-area: video;
+    }
+    &--group {
+      grid-area: group;
+      grid-row: span 2;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 }
