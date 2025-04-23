@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$clr-primary: #13304a;
+$clr-secondary: #086d59;
+$clr-tertiary: #37b971;
+$clr-quaternary: #e9ece7;
+$clr-black: #000;
+$clr-white: #fff;
+$clr-content: #222;
+$clr-danger: #9f0000;
+
+$font-family-base: "Inter", system-ui, sans-serif;
+
+$font-sizes: (
+  h1: 48px,
+  h2: 40px,
+  h3: 32px,
+  h4: 24px,
+  h5: 20px,
+  h6: 18px,
+  body: 16px,
+  small: 14px,
+);
+
+$line-heights: (
+  heading: 1.1,
+  body: 1.4,
+);
+
+$font-weights: (
+  bold: 700,
+  normal: 400,
+);
+
+@mixin type($level) {
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, $level);
+  line-height: if(
+    $level == body or $level == small,
+    map-get($line-heights, body),
+    map-get($line-heights, heading)
+  );
+  font-weight: if(
+    str-index($level, h) != null,
+    map-get($font-weights, bold),
+    map-get($font-weights, normal)
+  );
+}
+
+body {
+  @include type(body);
+  color: $clr-content;
+  background: linear-gradient(180deg, $clr-white 0%, $clr-quaternary 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  max-width: 1220px;
+  margin: auto;
+}
+
+h1 {
+  @include type(h1);
+  color: $clr-primary;
+}
+h2 {
+  @include type(h2);
+  color: $clr-primary;
+}
+h3 {
+  @include type(h3);
+  color: $clr-primary;
+}
+h4 {
+  @include type(h4);
+  color: $clr-primary;
+}
+h5 {
+  @include type(h5);
+  color: $clr-primary;
+}
+h6 {
+  @include type(h6);
+  color: $clr-primary;
+}
+
+a {
+  color: $clr-secondary;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.snippet {
+  &__heading {
+    @include type(h2);
+    &--secondary {
+      @include type(h3);
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  &__btn {
+    width: 142;
+    height: 38;
+    padding-top: 8px;
+    padding-right: 24px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    gap: 8px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    &--primary {
+      background-color: $clr-primary;
+    }
+    &--secondary {
+      background-color: $clr-secondary;
+    }
+  }
+}

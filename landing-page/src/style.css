@@ -1,1 +1,105 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #222;
+  background: linear-gradient(180deg, #fff 0%, #e9ece7 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  max-width: 1220px;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+h2 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+h3 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+h4 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+h5 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+h6 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #13304a;
+}
+
+a {
+  color: #086d59;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.snippet__heading {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.snippet__heading--secondary {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.snippet__links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.snippet__btn {
+  width: 142;
+  height: 38;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  gap: 8px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.snippet__btn--primary {
+  background-color: #13304a;
+}
+.snippet__btn--secondary {
+  background-color: #086d59;
+}/*# sourceMappingURL=style.css.map */

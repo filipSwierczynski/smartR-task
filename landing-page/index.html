@@ -4,9 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css">
-    <title></title>
+    <title>Attrax</title>
   </head>
   <body>
+    <article class="snippet" id="snippet">
+      <h2 class="snippet__heading" id="snippetHeading">
+        Snippet Heading
+      </h2>
+      <p class="snippet__description">
+        Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <a class="snippet__link snippet__link--accent" href="#">minim</a> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <h3 class="snippet__heading snippet__heading--secondary">Links</h3>
+      <nav class="snippet__links" aria-label="Snippet links">
+        <a href="#" class="snippet__btn snippet__btn--primary" id="linkOne">
+          Link One <span class="snippet__icon" aria-hidden="true">*</span>
+        </a>
+        <a href="#" class="snippet__btn snippet__btn--secondary">Link Two</a>
+      </nav>
+    </article>
+
+    <div class="snippet__grid">
+      <figure class="snippet__tile">
+        <img class="snippet__img" src="src/assets/img1.png" >
+      </figure>
+
+
+      <figure class="snippet__tile">
+        <img class="snippet__img" src="src/assets/img2.png" >
+      </figure>
+
+
+      <figure class="snippet__tile">
+        <img class="snippet__img" src="src/assets/img3.png" >
+      </figure>
+
+
+      <figure class="snippet__tile">
+        <img class="snippet__img" src="src/assets/img4.png" >
+      </figure>
+
+
+      <figure class="snippet__tile">
+        <img class="snippet__img" src="src/assets/img5.png" >
+      </figure>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
