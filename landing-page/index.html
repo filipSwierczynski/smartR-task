@@ -28,12 +28,12 @@
       </nav>
 
       <div class="snippet__grid">
-        <figure class="snippet__tile snippet__tile--robot snippet__tile--tall">
+        <figure class="snippet__tile snippet__tile--robot">
           <img class="snippet__img" src="src/assets/robot1.png" alt="" />
         </figure>
 
         <figure
-          class="snippet__tile snippet__tile--handshake snippet__tile--tall"
+          class="snippet__tile snippet__tile--handshake"
         >
           <img class="snippet__img" src="src/assets/handshake.png" alt="" />
         </figure>
@@ -47,33 +47,32 @@
             aria-haspopup="dialog"
             aria-controls="snippetModal"
           ></button>
-        </figure>
+        </figure> 
 
-        <figure class="snippet__tile snippet__tile--city snippet__tile--wide">
+        <figure class="snippet__tile snippet__tile--city">
           <img class="snippet__img" src="src/assets/city.png" alt="" />
         </figure>
 
-        <figure class="snippet__tile snippet__tile--group snippet__tile--2rows">
+        <figure class="snippet__tile snippet__tile--group">
           <img class="snippet__img" src="src/assets/group.png" alt="" />
         </figure>
       </div>
     </article>
-    <div
+    <dialog
       class="snippet-modal"
       id="snippetModal"
       role="dialog"
-      aria-modal="true"
       aria-labelledby="snippetModalHeading"
-      aria-hidden="true"
     >
-      <div class="snippet-modal__backdrop" data-close></div>
       <button
         type="button"
         class="snippet-modal__close"
         aria-label="Close video"
-        data-close
       >
-        &times;
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M15.0595 3.05938C15.6454 2.47344 15.6454 1.52188 15.0595 0.935944C14.4735 0.350006 13.522 0.350006 12.936 0.935944L8.0001 5.87657L3.05947 0.940631C2.47354 0.354694 1.52197 0.354694 0.936035 0.940631C0.350098 1.52657 0.350098 2.47813 0.936035 3.06407L5.87666 8.00001L0.940723 12.9406C0.354785 13.5266 0.354785 14.4781 0.940723 15.0641C1.52666 15.65 2.47822 15.65 3.06416 15.0641L8.0001 10.1234L12.9407 15.0594C13.5267 15.6453 14.4782 15.6453 15.0642 15.0594C15.6501 14.4734 15.6501 13.5219 15.0642 12.9359L10.1235 8.00001L15.0595 3.05938Z"
+              fill="#fff"/>
+      </svg>
       </button>
 
       <h3 class="snippet-modal__heading" id="snippetModalHeading">
@@ -91,8 +90,7 @@
       <div class="snippet-modal__video">
         <iframe
           id="snippetIframe"
-          width="560"
-          height="315"
+        
           title="YouTube video"
           frameborder="0"
           allow="autoplay; encrypted-media"
@@ -100,7 +98,10 @@
         >
         </iframe>
       </div>
-    </div>
+    </dialog>
+    <footer>
+      <p><b>Media Copyright</b> - Lorem ipsum dolor sit amet.</p>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
