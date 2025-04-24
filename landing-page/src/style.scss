@@ -107,26 +107,45 @@ a {
     gap: 15px;
   }
   &__btn {
-    width: 142px;
-    height: 38px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
     gap: 8px;
     border-radius: 8px;
     color: #fff;
     text-decoration: none;
+    transition: background 0.2s, color 0.2s;
     &--primary {
       background-color: $clr-primary;
+      &:hover,
+      &:focus-visible {
+        background: $clr-quaternary;
+        color: $clr-primary;
+      }
+      &:hover .snippet__icon,
+      &:focus-visible .snippet__icon {
+        fill: $clr-primary;
+      }
     }
     &--secondary {
       background-color: $clr-secondary;
+      &:hover,
+      &:focus-visible {
+        background: $clr-quaternary;
+        color: $clr-secondary;
+      }
     }
+  }
+  &__icon {
+    width: 1em;
+    height: 1em;
+    fill: $clr-white;
   }
   &__grid {
     display: grid;
     gap: $gap;
+    margin-top: 20px;
     grid-template-columns: repeat(3, $col);
     grid-auto-rows: $row;
     grid-auto-flow: dense;
@@ -137,10 +156,11 @@ a {
   }
 
   &__tile {
+    margin: 0;
     position: relative;
     overflow: hidden;
     border-radius: 0.75rem;
-    border-radius: 12px;
+    border-radius: 20px;
     &--robot {
       grid-area: robot;
       grid-row: span 2;
@@ -166,5 +186,33 @@ a {
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+  $arrow-path: "M3.42188 0.828143C2.72813 0.40158 1.85625 0.387518 1.14844 0.785955C0.440625 1.18439 0 1.93439 0 2.75002V19.25C0 20.0656 0.440625 20.8156 1.14844 21.2141C1.85625 21.6125 2.72813 21.5938 3.42188 21.1719L16.9219 12.9219C17.5922 12.5141 18 11.7875 18 11C18 10.2125 17.5922 9.49064 16.9219 9.07814L3.42188 0.828143Z";
+
+  &__play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: $clr-primary;
+    color: $clr-white;
+    transition: background 0.2s, color 0.2s;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: currentColor;
+      mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 21'><path d='#{$arrow-path}'/></svg>")
+        center/55% 55% no-repeat;
+    }
+    &:hover,
+    &:focus-visible {
+      background: $clr-quaternary;
+      color: $clr-primary;
+    }
   }
 }
